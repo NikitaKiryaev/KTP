@@ -3,7 +3,7 @@ public class Palindrome {
 	public static void main(String[] args) {
 		for (int i = 0; i < args.length; i++) {
 			String s = args[i];
-			if (isPalindrome(args[i])) {                //Выводи сообщение если слово палиндроми или нет.
+			if (isPalindrome(s)) {                //Выводи сообщение если слово палиндроми или нет.
 				System.out.println("Palindrome " + s);
 			
 				
@@ -33,11 +33,6 @@ public class Palindrome {
 		return false;
 
 	}
-
-
-
-
-
 
 
 }
