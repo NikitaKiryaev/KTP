@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class Exercise4 {
 	public static void main(String[] args) {
+		// Ввод и вывод данных
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Insert value of prob: ");
 		double prob = scanner.nextDouble();
@@ -16,6 +17,7 @@ public class Exercise4 {
 	}
 
 	public static boolean profitableGamble(double prob, int prize, int pay){
+		// Проверка выгоды
 		if (prob * prize > pay) {
 			return true;
 		}

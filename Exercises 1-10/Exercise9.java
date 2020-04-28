@@ -2,6 +2,7 @@ import java.lang.Math;
 import java.util.Scanner;
 public class Exercise9 {
 	public static void main(String[] args) {
+		// Ввод и вывод данных
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Input array length: ");
 		int size = scanner.nextInt();
@@ -17,7 +18,7 @@ public class Exercise9 {
 
 
 	public static int cubes (int[] array, int size){
-		
+		// Возведение в куб и суммирование эелементов массива
 		int sum = 0;
 		for (int g = 0; g < size; g++) {
 			sum += Math.pow(array[g], 3);

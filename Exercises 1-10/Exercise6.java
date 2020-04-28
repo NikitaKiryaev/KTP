@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class Exercise6 {
 	public static void main(String[] args) {
+		// Ввод и вывод данных
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Input button ");
 		String button = scanner.nextLine();
@@ -12,6 +13,7 @@ public class Exercise6 {
 	}
 
 	public static int code (String button) {
+		// Перевод символа в код ASCII
 		int ascii = button.charAt(0);
 		return ascii;
 		

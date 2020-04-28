@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class Exercise3 {
 	public static void main(String[] args) {
+		// Ввод и вывод данных, и проверка правильности введенных данных
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("How many chickens ");
 		int chicken = scanner.nextInt();
@@ -26,6 +27,7 @@ public class Exercise3 {
 
 
 	public static int Summary (int chicken, int cow, int pig){
+		// Вычисление кол-ва ног всех животных
 		int s = chicken*2 + cow*4 + pig*4;
 		return s;
 	}
