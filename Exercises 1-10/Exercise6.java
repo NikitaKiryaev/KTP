@@ -4,6 +4,10 @@ public class Exercise6 {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Input button ");
 		String button = scanner.nextLine();
+		if (button.length() > 1) {
+			System.out.print("Only one character per time ");
+			return;
+		}
 		System.out.println("ASCII code of your button is " + code(button));
 	}
 
