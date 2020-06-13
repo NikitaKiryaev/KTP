@@ -1,4 +1,3 @@
-
 public class Data {
     private String url;
     private int iteration;
