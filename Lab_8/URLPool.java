@@ -6,7 +6,7 @@ public class URLPool {
     private LinkedList<Data> open_list = new LinkedList<>();
     private LinkedList<Data> close_list = new LinkedList<>();
 
-    // Добавляем адрес в открытый список
+    
     public synchronized void addUrlData(Data data){
         open_list.add(data);
     }
@@ -21,22 +21,24 @@ public class URLPool {
     public boolean isEmptyOpen(){
         return open_list.isEmpty();
     }
+    // Вывод в файл
     public void fileOutput(String path){
-        try(FileOutputStream streamer=new FileOutputStream(path)){
+        try(FileOutputStream fos=new FileOutputStream(path)){
             String line = "";
-
             for(Data data : close_list)
                 line += data.getUrl() + " " + data.getIteration() + "\n";
             byte[] buffer = line.getBytes();
-            streamer.write(buffer, 0, buffer.length);
+            fos.write(buffer, 0, buffer.length);
         }
         catch(IOException e){
             System.out.println(e.getMessage());
         }
     }
-    // Выводим в консоль
+
+    // Вывод в консоль
     public void consoleOut(){
         for(Data data : close_list)
             System.out.println(data.getUrl() + " " + data.getIteration());
+
     }
 }

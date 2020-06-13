@@ -20,11 +20,12 @@ public class CrawlerTask implements Runnable {
             data = getURL();
         }
         if(data == null)
-            System.out.println("Превышено время ожидания ссылки в потоке: " + threadName);
+            System.out.println("Превышен тайм-аут ожидания ссылки в потоке: " + threadName);
     }
     private Data getURL(){
         if(pool.isEmptyOpen())
             for(int i = 0; i < 20; i++){
+                // Ожидание
                 waiting();
                 if(!pool.isEmptyOpen())
                     break;
